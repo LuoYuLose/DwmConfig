@@ -6,7 +6,7 @@ static const unsigned int gappx     = 12;        /* gaps between windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-static const char *fonts[]          = { "Source Code Pro:size=18" };
+static const char *fonts[]          = { "Source Code Pro:size=16" };
 static const char dmenufont[]       = "monospace:size=10";
 static const char col_gray1[]       = "#D8DEE9";
 static const char col_gray2[]       = "#D8DEE9";
@@ -31,10 +31,8 @@ static const Rule rules[] = {
 	/* class      instance    title       tags mask     isfloating   monitor */
 	{ "Gimp",     NULL,       NULL,       0,            1,           -1 },
 	{ "Firefox",  NULL,       NULL,       1 << 8,       0,           -1 },
-  { "org.jackhuang.hmcl.Launcher",  NULL, NULL, 0,    0,           -1 },
   { "QQ",       NULL,       NULL,       0,            1,           -1 },
   { "Steam",    NULL,       NULL,       0,            1,           -1 },
-  { "steam",    NULL,       NULL,       0,            1,           -1 },
   { "yesplaymusic",         NULL,       NULL,       0,            1,           -1 },
 };
 
