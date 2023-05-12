@@ -32,7 +32,7 @@ static const Rule rules[] = {
 	{ "Gimp",     NULL,       NULL,       0,            1,           -1 },
 	{ "Firefox",  NULL,       NULL,       1 << 8,       0,           -1 },
   { "QQ",       NULL,       NULL,       0,            1,           -1 },
-  { "Steam",    NULL,       NULL,       0,            1,           -1 },
+  { "steam",    NULL,       NULL,       0,            1,           -1 },
   { "yesplaymusic",         NULL,       NULL,       0,            1,           -1 },
 };
 
@@ -68,7 +68,7 @@ static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont,
 static const char *termcmd[]  = { "st", NULL };
 
 /* Custom Commands*/
-static const char *filecmd[]  = { "thunar", NULL };
+static const char *filecmd[]  = { "nautilus", NULL };
 static const char *music[] = { "/opt/YesPlayMusic/yesplaymusic", NULL };
 static const char *rofi[] = { "rofi", "-show", "drun", NULL };
 static const char *browser[] = { "firefox", NULL };
@@ -78,7 +78,7 @@ static const char *change_video_wallpaper[] = { "/home/luoyu/壁纸/launch_video
 static const char *change_to_feh[] = { "/home/luoyu/壁纸/change_to_feh.sh", NULL };
 static const char *lock_screen[] = { "i3lockblur", NULL };
 static const char *screenshot[] = { "flameshot", "gui", NULL };
-static const char *google[] = {"google-chrome-stable", NULL };
+static const char *chromium[] = {"chromium", NULL };
 
 /* MultiMedia Control */
 static const char *play_pause[] = { "playerctl", "play-pause", NULL };
@@ -98,7 +98,7 @@ static const Key keys[] = {
   { MODKEY,                       XK_r,      spawn,	   {.v = rofi } },
 	{ MODKEY,                       XK_m,      spawn,	   {.v = music } },
 	{ MODKEY,                       XK_F1,     spawn,	   {.v = browser } },
-  { MODKEY,                       XK_F2,     spawn,    {.v = google } },
+  { MODKEY,                       XK_F2,     spawn,    {.v = chromium } },
 	{ MODKEY,                       XK_Return, spawn, 	 {.v = terminal } },
 	{ MODKEY,                       XK_x,      spawn,	   {.v = powercontrol } },
   { ALTKEY,                       XK_l,      spawn,    {.v = lock_screen } },
