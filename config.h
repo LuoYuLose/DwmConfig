@@ -72,8 +72,6 @@ static const char *filecmd[]  = { "nautilus", NULL };
 static const char *music[] = { "/opt/YesPlayMusic/yesplaymusic", NULL };
 static const char *rofi[] = { "rofi", "-show", "drun", NULL };
 static const char *browser[] = { "firefox", NULL };
-static const char *terminal[] = { "st", NULL };
-static const char *powercontrol[] = { "archlinux-logout", NULL };
 static const char *change_video_wallpaper[] = { "/home/luoyu/壁纸/launch_video_wallpaper.sh", NULL };
 static const char *change_to_feh[] = { "/home/luoyu/壁纸/change_to_feh.sh", NULL };
 static const char *lock_screen[] = { "i3lockblur", NULL };
@@ -85,6 +83,10 @@ static const char *play_pause[] = { "playerctl", "play-pause", NULL };
 static const char *stop[] = { "playerctl", "stop", NULL };
 static const char *previous[] = { "playerctl", "previous", NULL };
 static const char *next[] = { "playerctl", "next", NULL };
+
+/* Brightness Control */
+static const char *lightup[] = { "light", "-A", "10", NULL };
+static const char *lightdown[] = { "light", "-U", "5", NULL };
 
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -99,8 +101,7 @@ static const Key keys[] = {
 	{ MODKEY,                       XK_m,      spawn,	   {.v = music } },
 	{ MODKEY,                       XK_F1,     spawn,	   {.v = browser } },
   { MODKEY,                       XK_F2,     spawn,    {.v = chromium } },
-	{ MODKEY,                       XK_Return, spawn, 	 {.v = terminal } },
-	{ MODKEY,                       XK_x,      spawn,	   {.v = powercontrol } },
+	{ MODKEY,                       XK_Return, spawn, 	 {.v = termcmd } },
   { ALTKEY,                       XK_l,      spawn,    {.v = lock_screen } },
  	{ ALTKEY,                       XK_c,      spawn,    {.v = change_video_wallpaper } },
   { ALTKEY,                       XK_x,      spawn,    {.v = change_to_feh } },
@@ -115,6 +116,10 @@ static const Key keys[] = {
   { 0,                            XF86XK_AudioStop, spawn,    {.v = stop } },
   { 0,                            XF86XK_AudioPrev, spawn,    {.v = previous } },
   { 0,                            XF86XK_AudioNext, spawn,    {.v = next } },
+
+  //Brightness Control
+  { 0,                            XF86XK_MonBrightnessUp,   spawn,  {.v = lightup } },
+  { 0,                            XF86XK_MonBrightnessDown, spawn,  {.v = lightdown } },
 
   // Awesome Bar
 	{ MODKEY|ShiftMask,             XK_s,      showall,        {0} },
