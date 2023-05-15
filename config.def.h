@@ -32,6 +32,7 @@ static const Rule rules[] = {
 	{ "Gimp",     NULL,       NULL,       0,            1,           -1 },
 	{ "Firefox",  NULL,       NULL,       1 << 8,       0,           -1 },
   { "QQ",       NULL,       NULL,       0,            1,           -1 },
+  { "qqmusic",  NULL,       NULL,       0,            1,           -1 },
   { "steam",    NULL,       NULL,       0,            1,           -1 },
   { "yesplaymusic",         NULL,       NULL,       0,            1,           -1 },
 };
@@ -70,6 +71,7 @@ static const char *termcmd[]  = { "st", NULL };
 /* Custom Commands*/
 static const char *filecmd[]  = { "nautilus", NULL };
 static const char *music[] = { "/opt/YesPlayMusic/yesplaymusic", NULL };
+static const char *qqmusic[] = { "qqmusic", NULL  };
 static const char *rofi[] = { "rofi", "-show", "drun", NULL };
 static const char *browser[] = { "firefox", NULL };
 static const char *change_video_wallpaper[] = { "/home/luoyu/壁纸/launch_video_wallpaper.sh", NULL };
@@ -107,6 +109,7 @@ static const Key keys[] = {
   { ALTKEY,                       XK_x,      spawn,    {.v = change_to_feh } },
   { 0,                            XK_Print,  spawn,    {.v = screenshot } },
   { MODKEY|ShiftMask,             XK_Return, spawn,    {.v = filecmd } },
+  { MODKEY|ShiftMask,             XK_m,      spawn,    {.v = qqmusic } },
 
   // Fullscreen
   { MODKEY|ShiftMask,             XK_f,      togglefullscr,  {0} },
