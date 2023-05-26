@@ -74,21 +74,24 @@ static const char *music[] = { "/opt/YesPlayMusic/yesplaymusic", NULL };
 static const char *qqmusic[] = { "qqmusic", NULL  };
 static const char *rofi[] = { "rofi", "-show", "drun", NULL };
 static const char *browser[] = { "firefox", NULL };
-static const char *change_video_wallpaper[] = { "/home/luoyu/壁纸/launch_video_wallpaper.sh", NULL };
+static const char *change_video_wallpaper[] = { "/home/luoyu/壁纸/LaunchVideoWallpaper.sh", NULL };
 static const char *change_to_feh[] = { "/home/luoyu/壁纸/change_to_feh.sh", NULL };
 static const char *lock_screen[] = { "i3lockblur", NULL };
 static const char *screenshot[] = { "flameshot", "gui", NULL };
 static const char *chromium[] = {"chromium", NULL };
+
+/* Brightness Control */
+static const char *lightup[] = { "light", "-A", "10", NULL };
+static const char *lightdown[] = { "light", "-U", "5", NULL };
+
+/* System Power Control */
+static const char *exit_to_the_sddm[] = { "pkill",  "-KILL", "-u", "$USER", NULL };
 
 /* MultiMedia Control */
 static const char *play_pause[] = { "playerctl", "play-pause", NULL };
 static const char *stop[] = { "playerctl", "stop", NULL };
 static const char *previous[] = { "playerctl", "previous", NULL };
 static const char *next[] = { "playerctl", "next", NULL };
-
-/* Brightness Control */
-static const char *lightup[] = { "light", "-A", "10", NULL };
-static const char *lightdown[] = { "light", "-U", "5", NULL };
 
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -135,6 +138,9 @@ static const Key keys[] = {
   { MODKEY,                       XK_Right,  focusstackvis,  {.i = +1 } },
   { MODKEY,                       XK_Left,   focusstackvis,  {.i = -1 } },
 
+
+  // System Power Control
+  { MODKEY,                       XK_x,      spawn,          {.v = exit_to_the_sddm } },
 
   /* 
    * { MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
