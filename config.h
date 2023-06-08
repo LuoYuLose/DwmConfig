@@ -4,7 +4,7 @@
 static const unsigned int borderpx  = 1;        /* border pixel of windows */
 static const unsigned int gappx     = 12;        /* gaps between windows */
 static const unsigned int snap      = 32;       /* snap pixel */
-static const int showbar            = 1;        /* 0 means no bar */
+static const int showbar            = 0;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const char *fonts[]          = { "Source Code Pro:size=16" };
 static const char dmenufont[]       = "monospace:size=10";
@@ -66,7 +66,7 @@ static const Layout layouts[] = {
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
-static const char *termcmd[]  = { "st", NULL };
+static const char *termcmd[]  = { "kitty", NULL };
 
 /* Custom Commands*/
 static const char *filecmd[]  = { "nautilus", NULL };
@@ -74,7 +74,7 @@ static const char *music[] = { "/opt/YesPlayMusic/yesplaymusic", NULL };
 static const char *qqmusic[] = { "qqmusic", NULL  };
 static const char *rofi[] = { "rofi", "-show", "drun", NULL };
 static const char *browser[] = { "firefox", NULL };
-static const char *change_video_wallpaper[] = { "/home/luoyu/壁纸/LaunchVideoWallpaper.sh", NULL };
+static const char *change_video_wallpaper[] = { "/home/luoyu/WallPapers/LaunchVideoWallpaper.sh", NULL };
 static const char *change_to_feh[] = { "/home/luoyu/壁纸/change_to_feh.sh", NULL };
 static const char *lock_screen[] = { "i3lockblur", NULL };
 static const char *screenshot[] = { "flameshot", "gui", NULL };
