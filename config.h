@@ -4,9 +4,9 @@
 static const unsigned int borderpx  = 1;        /* border pixel of windows */
 static const unsigned int gappx     = 12;        /* gaps between windows */
 static const unsigned int snap      = 32;       /* snap pixel */
-static const int showbar            = 0;        /* 0 means no bar */
+static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-static const char *fonts[]          = { "Source Code Pro:size=16" };
+static const char *fonts[]          = { "MesloLGS Nerd Font Mono Regular:size=14" };
 static const char dmenufont[]       = "monospace:size=10";
 static const char col_gray1[]       = "#D8DEE9";
 static const char col_gray2[]       = "#D8DEE9";
@@ -79,6 +79,7 @@ static const char *change_to_feh[] = { "/home/luoyu/壁纸/change_to_feh.sh", NU
 static const char *lock_screen[] = { "i3lockblur", NULL };
 static const char *screenshot[] = { "flameshot", "gui", NULL };
 static const char *chromium[] = {"chromium", NULL };
+static const char *neteasecloudmusic[] = {"netease-cloud-music", NULL };
 
 /* Brightness Control */
 static const char *lightup[] = { "light", "-A", "10", NULL };
@@ -113,6 +114,7 @@ static const Key keys[] = {
   { 0,                            XK_Print,  spawn,    {.v = screenshot } },
   { MODKEY|ShiftMask,             XK_Return, spawn,    {.v = filecmd } },
   { MODKEY|ShiftMask,             XK_m,      spawn,    {.v = qqmusic } },
+  { MODKEY|ControlMask,           XK_m,      spawn,    {.v = neteasecloudmusic } },
 
   // Fullscreen
   { MODKEY|ShiftMask,             XK_f,      togglefullscr,  {0} },

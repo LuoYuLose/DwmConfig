@@ -44,6 +44,9 @@ run "/home/luoyu/WallPapers/LaunchVideoWallpaper.sh"
 # Screen Autolock（没测试过，但自动锁屏也不是我的刚需就是了
 run "/home/luoyu/.config/arco-dwm/scripts/autolockscreen.sh"
 
+# Polybar
+# sh $HOME/.config/polybar/launch.sh --forest
+
 fcitx5 -d
 #run "insync start"
 #run "spotify"
