@@ -27,7 +27,7 @@ run "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1"
 picom -b  --config ~/.config/picom/picom.conf &
 run "numlockx on"
 run "volumeicon"
-run slstatus &
+slstatus &
 # sxhkd -c ~/.config/arco-dwm/sxhkd/sxhkdrc &
 #run "nitrogen --restore"
 # run "conky -c $HOME/.config/arco-dwm/system-overview"
@@ -39,10 +39,12 @@ run slstatus &
 #run applications from startup
 
 # Video Wallpaper
-run "/home/luoyu/WallPapers/LaunchVideoWallpaper.sh"
+# run "/home/luoyu/WallPapers/LaunchVideoWallpaper.sh"
+
+feh --bg-scale ~/WallPapers/静态壁纸/20230404_005550.png &
 
 # Screen Autolock（没测试过，但自动锁屏也不是我的刚需就是了
-run "/home/luoyu/.config/arco-dwm/scripts/autolockscreen.sh"
+# run "/home/luoyu/.config/arco-dwm/scripts/autolockscreen.sh"
 
 # Polybar
 # sh $HOME/.config/polybar/launch.sh --forest
