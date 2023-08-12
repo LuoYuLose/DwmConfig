@@ -71,7 +71,7 @@ static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont,
 static const char *termcmd[]  = { "kitty", NULL };
 
 /* Custom Commands*/
-static const char *filecmd[]  = { "nautilus", NULL };
+static const char *filecmd[]  = { "thunar", NULL };
 static const char *music[] = { "/opt/YesPlayMusic/yesplaymusic", NULL };
 static const char *qqmusic[] = { "qqmusic", NULL  };
 static const char *rofi[] = { "rofi", "-show", "drun", NULL };
