@@ -8,7 +8,7 @@ static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const int vertpad            = 10;       /* vertical padding of bar */
 static const int sidepad            = 10;       /* horizontal padding of bar */
-static const char *fonts[]          = { "JetBrains Mono NL Regular:size=16" };
+static const char *fonts[]          = { "Fira Sans Italic:size=14" };
 static const char dmenufont[]       = "monospace:size=10";
 static const char col_gray1[]       = "#D8DEE9";
 static const char col_gray2[]       = "#D8DEE9";
